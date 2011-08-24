@@ -1,0 +1,28 @@
+xst -intstyle ise -ifn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.xst" -ofn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.xst" -ofn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.xst" -ofn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.xst" -ofn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.syr" 
+xst -intstyle ise -ifn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.xst" -ofn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CountBtn.ucf -p xc3s250e-vq100-4 CountBtn.ngc CountBtn.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o CountBtn_map.ncd CountBtn.ngd CountBtn.pcf 
+par -w -intstyle ise -ol high -t 1 CountBtn_map.ncd CountBtn.ncd CountBtn.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CountBtn.twx CountBtn.ncd -o CountBtn.twr CountBtn.pcf -ucf CountBtn.ucf 
+bitgen -intstyle ise -f CountBtn.ut CountBtn.ncd 
+xst -intstyle ise -ifn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.xst" -ofn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CountBtn.ucf -p xc3s250e-vq100-4 CountBtn.ngc CountBtn.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o CountBtn_map.ncd CountBtn.ngd CountBtn.pcf 
+par -w -intstyle ise -ol high -t 1 CountBtn_map.ncd CountBtn.ncd CountBtn.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CountBtn.twx CountBtn.ncd -o CountBtn.twr CountBtn.pcf -ucf CountBtn.ucf 
+bitgen -intstyle ise -f CountBtn.ut CountBtn.ncd 
+xst -intstyle ise -ifn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.xst" -ofn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CountBtn.ucf -p xc3s250e-vq100-4 CountBtn.ngc CountBtn.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o CountBtn_map.ncd CountBtn.ngd CountBtn.pcf 
+par -w -intstyle ise -ol high -t 1 CountBtn_map.ncd CountBtn.ncd CountBtn.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CountBtn.twx CountBtn.ncd -o CountBtn.twr CountBtn.pcf -ucf CountBtn.ucf 
+bitgen -intstyle ise -f CountBtn.ut CountBtn.ncd 
+xst -intstyle ise -ifn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.xst" -ofn "C:/Users/Jason/Repos/CountBtn/src/CountBtn.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CountBtn.ucf -p xc3s250e-vq100-4 CountBtn.ngc CountBtn.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o CountBtn_map.ncd CountBtn.ngd CountBtn.pcf 
+par -w -intstyle ise -ol high -t 1 CountBtn_map.ncd CountBtn.ncd CountBtn.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CountBtn.twx CountBtn.ncd -o CountBtn.twr CountBtn.pcf -ucf CountBtn.ucf 
+bitgen -intstyle ise -f CountBtn.ut CountBtn.ncd 

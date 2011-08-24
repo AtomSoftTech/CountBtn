@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Jason\Repos\CountBtn\src\CountBtn.ncd
+OUTFILE=C:\Users\Jason\Repos\CountBtn\src\CountBtn.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4vq100
+WORKINGDIR=C:\Users\Jason\Repos\CountBtn\src
+LICENSE=WebPack
+USER_INFO=__0_0_0

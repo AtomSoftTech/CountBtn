@@ -1,0 +1,373 @@
+Release 13.2 - xst O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: CountBtn.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CountBtn.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CountBtn"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-vq100
+
+---- Source Options
+Top Module Name                    : CountBtn
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jason/Repos/CountBtn/src/CountBtn.vhd" in Library work.
+Entity <countbtn> compiled.
+Entity <countbtn> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CountBtn> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <CountBtn> in library <work> (Architecture <behavioral>).
+Entity <CountBtn> analyzed. Unit <CountBtn> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <CountBtn>.
+    Related source file is "C:/Users/Jason/Repos/CountBtn/src/CountBtn.vhd".
+    Found 25-bit up counter for signal <count>.
+    Found 1-bit register for signal <ready>.
+    Found 16-bit up counter for signal <state>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <CountBtn> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <CountBtn> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CountBtn, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CountBtn.ngr
+Top Level Output File Name         : CountBtn
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 166
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 39
+#      LUT2                        : 26
+#      LUT3                        : 1
+#      LUT4                        : 6
+#      MUXCY                       : 46
+#      VCC                         : 1
+#      XORCY                       : 41
+# FlipFlops/Latches                : 42
+#      FDCE                        : 42
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 2
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250evq100-4 
+
+ Number of Slices:                       41  out of   2448     1%  
+ Number of Slice Flip Flops:             42  out of   4896     0%  
+ Number of 4 input LUTs:                 77  out of   4896     1%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of     66    28%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 42    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst_inv(rst_inv1_INV_0:O)          | NONE(count_0)          | 42    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.050ns (Maximum Frequency: 165.281MHz)
+   Minimum input arrival time before clock: 4.037ns
+   Maximum output required time after clock: 4.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.050ns (frequency: 165.281MHz)
+  Total number of paths / destination ports: 1154 / 84
+-------------------------------------------------------------------------
+Delay:               6.050ns (Levels of Logic = 8)
+  Source:            count_9 (FF)
+  Destination:       ready (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: count_9 to ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.622  count_9 (count_9)
+     LUT4:I0->O            1   0.704   0.000  count_cmp_eq0000_wg_lut<1> (count_cmp_eq0000_wg_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  count_cmp_eq0000_wg_cy<1> (count_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  count_cmp_eq0000_wg_cy<2> (count_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  count_cmp_eq0000_wg_cy<3> (count_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  count_cmp_eq0000_wg_cy<4> (count_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  count_cmp_eq0000_wg_cy<5> (count_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O          26   0.459   1.295  count_cmp_eq0000_wg_cy<6> (count_cmp_eq0000)
+     LUT3:I2->O            1   0.704   0.420  ready_not00011 (ready_not0001)
+     FDCE:CE                   0.555          ready
+    ----------------------------------------
+    Total                      6.050ns (3.713ns logic, 2.337ns route)
+                                       (61.4% logic, 38.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              4.037ns (Levels of Logic = 2)
+  Source:            btn (PAD)
+  Destination:       state_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn to state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.526  btn_IBUF (btn_IBUF)
+     LUT2:I1->O           16   0.704   1.034  state_not00011 (state_not0001)
+     FDCE:CE                   0.555          state_0
+    ----------------------------------------
+    Total                      4.037ns (2.477ns logic, 1.560ns route)
+                                       (61.4% logic, 38.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            state_15 (FF)
+  Destination:       DB<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: state_15 to DB<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.447  state_15 (state_15)
+     OBUF:I->O                 3.272          DB_15_OBUF (DB<15>)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.66 secs
+ 
+--> 
+
+Total memory usage is 188176 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
